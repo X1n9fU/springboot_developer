@@ -1,4 +1,4 @@
-package me.minkyeong.springbootdeveloper.step2.dto;
+package me.minkyeong.springbootdeveloper.step2.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
