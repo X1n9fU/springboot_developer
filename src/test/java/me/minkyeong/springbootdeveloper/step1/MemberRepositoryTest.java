@@ -1,5 +1,7 @@
-package me.minkyeong.springbootdeveloper;
+package me.minkyeong.springbootdeveloper.step1;
 
+import me.minkyeong.springbootdeveloper.step1.Member;
+import me.minkyeong.springbootdeveloper.step1.MemberRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +11,6 @@ import org.springframework.test.context.jdbc.Sql;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
 class MemberRepositoryTest {
@@ -22,6 +23,7 @@ class MemberRepositoryTest {
     //테스트 실행 전 sql 스크립트 실행
     @Test
     void getAllMembers(){
+        //SELECT * FROM member;
         //when
         List<Member> members = memberRepository.findAll();
 
@@ -32,6 +34,7 @@ class MemberRepositoryTest {
     @Sql("/insert-members.sql")
     @Test
     void getMemberById(){
+        //SELECT * FROM member WHERE id = 2;
         //when
         Member member = memberRepository.findById(2L).get();
 
@@ -42,6 +45,7 @@ class MemberRepositoryTest {
     @Sql("/insert-members.sql")
     @Test
     void getMemberByName(){
+        //SELECT * FROM member WHERE name = 'C';
         //when
         Member member = memberRepository.findByName("C").get();
 
@@ -53,6 +57,7 @@ class MemberRepositoryTest {
 
     @Test
     void saveMember(){
+        //INSERT INTO member (id, name) VALUES (1, 'A');
         //given
         Member member = new Member(1L, "A");
 
@@ -80,6 +85,7 @@ class MemberRepositoryTest {
     @Sql("/insert-members.sql")
     @Test
     void deleteMemberById(){
+        //DELETE FROM member WHERE id = 2;
         //when
         memberRepository.deleteById(2L);
 
@@ -92,6 +98,7 @@ class MemberRepositoryTest {
     @Sql("/insert-members.sql")
     @Test
     void deleteMembers(){
+        //DELETE FROM member;
         //when
         memberRepository.deleteAll();
 
@@ -113,6 +120,7 @@ class MemberRepositoryTest {
     @Sql("/insert-members.sql")
     @Test
     void update(){
+        //UPDATE member SET name = 'BC' WHERE id = 2;
         //given
         Member member = memberRepository.findById(2L).get();
 

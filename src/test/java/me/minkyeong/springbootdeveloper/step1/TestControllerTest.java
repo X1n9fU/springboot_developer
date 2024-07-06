@@ -1,8 +1,10 @@
-package me.minkyeong.springbootdeveloper;
+package me.minkyeong.springbootdeveloper.step1;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import me.minkyeong.springbootdeveloper.step1.Member;
+import me.minkyeong.springbootdeveloper.step1.MemberRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

@@ -1,4 +1,4 @@
-package me.minkyeong.springbootdeveloper;
+package me.minkyeong.springbootdeveloper.step1;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
