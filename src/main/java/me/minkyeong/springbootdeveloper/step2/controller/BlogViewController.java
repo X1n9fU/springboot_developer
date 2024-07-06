@@ -2,8 +2,8 @@ package me.minkyeong.springbootdeveloper.step2.controller;
 
 import lombok.RequiredArgsConstructor;
 import me.minkyeong.springbootdeveloper.step2.domain.Article;
-import me.minkyeong.springbootdeveloper.step2.dto.ArticleListViewResponse;
-import me.minkyeong.springbootdeveloper.step2.dto.ArticleViewResponse;
+import me.minkyeong.springbootdeveloper.step2.dto.response.ArticleListViewResponse;
+import me.minkyeong.springbootdeveloper.step2.dto.response.ArticleViewResponse;
 import me.minkyeong.springbootdeveloper.step2.service.BlogService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

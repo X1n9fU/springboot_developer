@@ -2,10 +2,9 @@ package me.minkyeong.springbootdeveloper.step2.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import me.minkyeong.springbootdeveloper.step2.domain.Article;
-import me.minkyeong.springbootdeveloper.step2.dto.AddArticleRequest;
-import me.minkyeong.springbootdeveloper.step2.dto.UpdateArticleRequest;
+import me.minkyeong.springbootdeveloper.step2.dto.request.AddArticleRequest;
+import me.minkyeong.springbootdeveloper.step2.dto.request.UpdateArticleRequest;
 import me.minkyeong.springbootdeveloper.step2.repository.BlogRepository;
-import org.hibernate.engine.jdbc.env.spi.LobCreatorBuilder;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -18,11 +17,9 @@ import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-import javax.xml.transform.Result;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
