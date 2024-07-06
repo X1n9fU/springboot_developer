@@ -1,4 +1,4 @@
-package me.minkyeong.springbootdeveloper;
+package me.minkyeong.springbootdeveloper.step1;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
