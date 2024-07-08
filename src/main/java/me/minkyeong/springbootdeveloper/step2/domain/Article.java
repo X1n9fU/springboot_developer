@@ -5,10 +5,17 @@ import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity //엔티티로 지정
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@EntityListeners(AuditingEntityListener.class) //Entity의 생성 및 수정 시간을 자동으로 감시 및 기록
 public class Article {
     @Id //id 필드를 기본키로 지정
     @GeneratedValue(strategy = GenerationType.IDENTITY) //기본키를 자동으로 1씩 증가
@@ -32,22 +39,12 @@ public class Article {
         this.content = content;
     }
 
-//    public Article() {
-//
-//    }
-    //NoArgsConstructor
+    @CreatedDate
+    @Column(name="created_at")
+    private LocalDateTime createdAt;
 
-//    public Long getId() {
-//        return id;
-//    }
-//
-//    public String getTitle() {
-//        return title;
-//    }
-//
-//    public String getContent() {
-//        return content;
-//    }
-    //Getter
+    @LastModifiedDate
+    @Column(name="updated_at")
+    private LocalDateTime updatedAt;
 
 }

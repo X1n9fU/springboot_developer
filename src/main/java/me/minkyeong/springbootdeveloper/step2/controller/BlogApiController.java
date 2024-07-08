@@ -2,9 +2,9 @@ package me.minkyeong.springbootdeveloper.step2.controller;
 
 import lombok.RequiredArgsConstructor;
 import me.minkyeong.springbootdeveloper.step2.domain.Article;
-import me.minkyeong.springbootdeveloper.step2.dto.AddArticleRequest;
-import me.minkyeong.springbootdeveloper.step2.dto.ArticleResponse;
-import me.minkyeong.springbootdeveloper.step2.dto.UpdateArticleRequest;
+import me.minkyeong.springbootdeveloper.step2.dto.request.AddArticleRequest;
+import me.minkyeong.springbootdeveloper.step2.dto.response.ArticleResponse;
+import me.minkyeong.springbootdeveloper.step2.dto.request.UpdateArticleRequest;
 import me.minkyeong.springbootdeveloper.step2.service.BlogService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

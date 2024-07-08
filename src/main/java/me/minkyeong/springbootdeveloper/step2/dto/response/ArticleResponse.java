@@ -1,4 +1,4 @@
-package me.minkyeong.springbootdeveloper.step2.dto;
+package me.minkyeong.springbootdeveloper.step2.dto.response;
 
 import lombok.Getter;
 import me.minkyeong.springbootdeveloper.step2.domain.Article;

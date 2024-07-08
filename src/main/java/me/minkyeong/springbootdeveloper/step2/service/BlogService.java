@@ -2,8 +2,8 @@ package me.minkyeong.springbootdeveloper.step2.service;
 
 import lombok.RequiredArgsConstructor;
 import me.minkyeong.springbootdeveloper.step2.domain.Article;
-import me.minkyeong.springbootdeveloper.step2.dto.AddArticleRequest;
-import me.minkyeong.springbootdeveloper.step2.dto.UpdateArticleRequest;
+import me.minkyeong.springbootdeveloper.step2.dto.request.AddArticleRequest;
+import me.minkyeong.springbootdeveloper.step2.dto.request.UpdateArticleRequest;
 import me.minkyeong.springbootdeveloper.step2.repository.BlogRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
