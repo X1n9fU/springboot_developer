@@ -15,3 +15,8 @@ spring:
   h2: #H2 콘솔 활성화
     console:
       enabled: true
+
+jwt:
+  issuer: minkyeong0244@gmail.com
+  secretKey: c29tZVNlY3VyZUtleVRleHRUZXh0VGV4dFRleHRUZXh0VGV4dFRleHRUZXh0
+  #HMAC-SHA 알고리즘의 보안 요구 사항 준수
