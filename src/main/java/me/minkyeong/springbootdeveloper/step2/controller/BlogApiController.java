@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -18,8 +19,8 @@ public class BlogApiController {
     private final BlogService blogService;
 
     @PostMapping("/api/articles") //HTTP 메서드가 POST 일 때 전달받은 URL과 동일하면 메서드로 매핑
-    public ResponseEntity<Article> addArticle(@RequestBody AddArticleRequest request){ //@ResponseBody로 요청 본문 값 매핑
-        Article savedArticle = blogService.save(request);
+    public ResponseEntity<Article> addArticle(@RequestBody AddArticleRequest request, Principal principal){ //@ResponseBody로 요청 본문 값 매핑
+        Article savedArticle = blogService.save(request, principal.getName());
         return ResponseEntity.status(HttpStatus.CREATED) //응답코드로 201, Created 응답
                 .body(savedArticle);
     }
