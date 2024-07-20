@@ -119,3 +119,25 @@ function httpRequest(method, url, body, success, fail) {
         }
     });
 }
+
+const logoutButton = document.getElementById('logout-btn');
+
+if (logoutButton){
+    logoutButton.addEventListener('click', event => {
+        function success(){
+            localStorage.removeItem('access_token');
+
+            deleteCookie('refresh_token');
+            location.replace('/login');
+        }
+        function fail() {
+            alert('로그아웃 실패');
+        }
+
+        httpRequest('DELETE', '/api/refresh-token', null, success, fail);
+    });
+}
+
+function deleteCookie(name){
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
