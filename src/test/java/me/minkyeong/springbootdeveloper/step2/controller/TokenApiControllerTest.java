@@ -73,7 +73,7 @@ class TokenApiControllerTest {
         final String url = "/api/token";
 
         User testUser = userRepository.save(User.builder()
-                .email("user@gmail.com")
+                .email("user2@gmail.com")
                 .password("test")
                 .build());
 

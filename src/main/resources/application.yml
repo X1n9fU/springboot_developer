@@ -9,9 +9,12 @@ spring:
       hibernate:
         format_sql: true
     defer-datasource-initialization: true
-  datasource: #데이터베이스 정보 추가
-    url : jdbc:h2:mem:testdb
-    username : sa
+
+    #애플리케이션 실행 시 일래스틱 빈스토크에서 값을 덮어쓰므로 삭제
+#  datasource: #데이터베이스 정보 추가
+#    url : jdbc:h2:mem:testdb
+#    username : sa
+
   h2: #H2 콘솔 활성화
     console:
       enabled: true
