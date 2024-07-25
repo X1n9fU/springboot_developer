@@ -31,6 +31,6 @@ spring:
 
 jwt:
   issuer: minkyeong0244@gmail.com
-  secretKey: c29tZVNlY3VyZUtleVRleHRUZXh0VGV4dFRleHRUZXh0VGV4dFRleHRUZXh0
+  secretKey: ${jwt_secretKey}
   #HMAC-SHA 알고리즘의 보안 요구 사항 준수
 
