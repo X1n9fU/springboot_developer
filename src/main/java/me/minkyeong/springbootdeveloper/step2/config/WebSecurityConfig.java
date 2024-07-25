@@ -1,3 +1,4 @@
+/*
 package me.minkyeong.springbootdeveloper.step2.config;
 
 import lombok.RequiredArgsConstructor;
@@ -73,3 +74,4 @@ public class WebSecurityConfig {
         return new BCryptPasswordEncoder();
     }
 }
+*/

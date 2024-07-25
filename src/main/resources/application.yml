@@ -9,14 +9,28 @@ spring:
       hibernate:
         format_sql: true
     defer-datasource-initialization: true
-  datasource: #데이터베이스 정보 추가
-    url : jdbc:h2:mem:testdb
-    username : sa
+
+    #애플리케이션 실행 시 일래스틱 빈스토크에서 값을 덮어쓰므로 삭제
+#  datasource: #데이터베이스 정보 추가
+#    url : jdbc:h2:mem:testdb
+#    username : sa
+
   h2: #H2 콘솔 활성화
     console:
       enabled: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${client_id}
+            client-secret: ${client_secret}
+            scope:
+              - email
+              - profile
 
 jwt:
   issuer: minkyeong0244@gmail.com
   secretKey: c29tZVNlY3VyZUtleVRleHRUZXh0VGV4dFRleHRUZXh0VGV4dFRleHRUZXh0
   #HMAC-SHA 알고리즘의 보안 요구 사항 준수
+

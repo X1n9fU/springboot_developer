@@ -1,7 +1,5 @@
 package me.minkyeong.springbootdeveloper.step1;
 
-import me.minkyeong.springbootdeveloper.step1.Member;
-import me.minkyeong.springbootdeveloper.step1.MemberRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
